@@ -1,0 +1,42 @@
+{
+  "department_stats": {
+    "Marketing:standard": {
+      "runs": 2,
+      "avg_score": 9.0,
+      "success_rate": 1.0,
+      "avg_cost": 0.026800666666666667
+    },
+    "IT:standard": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.036797333333333335
+    },
+    "Operations:standard": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.036797333333333335
+    }
+  },
+  "model_stats": {
+    "Marketing:nvidia/nemotron-nano-9b-v2": {
+      "runs": 2,
+      "avg_score": 9.0,
+      "success_rate": 1.0,
+      "avg_cost": 0.026800666666666667
+    },
+    "IT:google/gemma-3-4b-it": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.036797333333333335
+    },
+    "Operations:google/gemma-3-4b-it": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.036797333333333335
+    }
+  }
+}

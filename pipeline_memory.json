@@ -1,0 +1,19 @@
+{
+  "standard": {
+    "pipelines": [
+      {
+        "sequence": [
+          "ceo",
+          "engineering",
+          "judge",
+          "reflect",
+          "learner"
+        ],
+        "avg_score": 9.0,
+        "avg_cost": 0.063598,
+        "success_rate": 1.0,
+        "runs": 2
+      }
+    ]
+  }
+}

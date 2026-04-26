@@ -1,0 +1,298 @@
+{
+  "meta-llama/llama-3-8b-instruct": {
+    "total_runs": 53,
+    "successes": 31,
+    "failures": 22,
+    "avg_score": 0.4729113207547171,
+    "avg_cost": 0.0003632452830188678,
+    "reward": 0.4814919153757153
+  },
+  "openai/gpt-4o-mini": {
+    "total_runs": 250,
+    "successes": 27,
+    "failures": 223,
+    "avg_score": 0.09011800000000002,
+    "avg_cost": 0.000121924,
+    "reward": 0.09071790558835097
+  },
+  "anthropic/claude-3-haiku": {
+    "total_runs": 48,
+    "successes": 25,
+    "failures": 23,
+    "avg_score": 0.44665833333333327,
+    "avg_cost": 0.0004892083333333332,
+    "reward": 0.4612439665753312
+  },
+  "google/gemini-2.0-flash-001": {
+    "total_runs": 59,
+    "successes": 34,
+    "failures": 25,
+    "avg_score": 0.49339491525423745,
+    "avg_cost": 0.0006787237288135592,
+    "reward": 0.5057659356233198
+  },
+  "anthropic/claude-3.5-sonnet": {
+    "total_runs": 7,
+    "successes": 0,
+    "failures": 7,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "openai/gpt-4o": {
+    "total_runs": 5,
+    "successes": 0,
+    "failures": 5,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "qwen/qwen3-coder-480b": {
+    "total_runs": 3,
+    "successes": 0,
+    "failures": 3,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "qwen/qwen-2.5-72b-instruct": {
+    "total_runs": 256,
+    "successes": 36,
+    "failures": 220,
+    "avg_score": 0.11855468749999978,
+    "avg_cost": 0.00020890625000000022,
+    "reward": 0.11855468749999978
+  },
+  "anthropic/claude-3.5-sonnet-20240620": {
+    "total_runs": 6,
+    "successes": 0,
+    "failures": 6,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "qwen/qwen-2.5-coder-32b-instruct": {
+    "total_runs": 210,
+    "successes": 0,
+    "failures": 210,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "meta-llama/llama-3-8b-instruct:free": {
+    "total_runs": 30,
+    "successes": 0,
+    "failures": 30,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "deepseek/deepseek-r1:free": {
+    "total_runs": 18,
+    "successes": 0,
+    "failures": 18,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "google/gemini-2.0-flash-exp:free": {
+    "total_runs": 22,
+    "successes": 0,
+    "failures": 22,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "mistralai/mistral-7b-instruct:free": {
+    "total_runs": 2,
+    "successes": 0,
+    "failures": 2,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "qwen/qwen3-8b:free": {
+    "total_runs": 2,
+    "successes": 0,
+    "failures": 2,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "microsoft/phi-4-reasoning:free": {
+    "total_runs": 2,
+    "successes": 0,
+    "failures": 2,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "meta-llama/llama-3.2-3b-instruct:free": {
+    "total_runs": 8,
+    "successes": 0,
+    "failures": 8,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "meta-llama/llama-3.3-70b-instruct:free": {
+    "total_runs": 51,
+    "successes": 0,
+    "failures": 51,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "qwen/qwen3-30b-a3b:free": {
+    "total_runs": 11,
+    "successes": 0,
+    "failures": 11,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "openrouter/free": {
+    "total_runs": 34,
+    "successes": 11,
+    "failures": 23,
+    "avg_score": 0.24117647058823533,
+    "avg_cost": 0.0,
+    "reward": 0.24117647058823533
+  },
+  "google/gemma-3-4b-it:free": {
+    "total_runs": 18,
+    "successes": 4,
+    "failures": 14,
+    "avg_score": 0.1555555555555556,
+    "avg_cost": 0.0,
+    "reward": 0.1555555555555556
+  },
+  "nvidia/llama-3.1-nemotron-ultra-253b:free": {
+    "total_runs": 2,
+    "successes": 0,
+    "failures": 2,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "deepseek/deepseek-chat-v3-0324:free": {
+    "total_runs": 2,
+    "successes": 0,
+    "failures": 2,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "nvidia/nemotron-nano-9b-v2:free": {
+    "total_runs": 21,
+    "successes": 13,
+    "failures": 8,
+    "avg_score": 0.43333333333333324,
+    "avg_cost": 0.0,
+    "reward": 0.43333333333333324
+  },
+  "nvidia/nemotron-3-super-120b-a12b:free": {
+    "total_runs": 7,
+    "successes": 3,
+    "failures": 4,
+    "avg_score": 0.36428571428571427,
+    "avg_cost": 0.0,
+    "reward": 0.36428571428571427
+  },
+  "qwen/qwen3-next-80b-a3b-instruct:free": {
+    "total_runs": 4,
+    "successes": 0,
+    "failures": 4,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "nousresearch/hermes-3-llama-3.1-405b:free": {
+    "total_runs": 5,
+    "successes": 0,
+    "failures": 5,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "google/gemma-3-27b-it:free": {
+    "total_runs": 18,
+    "successes": 0,
+    "failures": 18,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  },
+  "google/gemma-3-4b-it": {
+    "total_runs": 172,
+    "successes": 170,
+    "failures": 2,
+    "avg_score": 0.7827325581395344,
+    "avg_cost": 0.0020832383720930238,
+    "reward": 0.7827325581395344
+  },
+  "nvidia/nemotron-3-super-120b-a12b": {
+    "total_runs": 9,
+    "successes": 9,
+    "failures": 0,
+    "avg_score": 0.7544444444444444,
+    "avg_cost": 0.0018977777777777777,
+    "reward": 0.7544444444444444
+  },
+  "nousresearch/hermes-3-llama-3.1-405b": {
+    "total_runs": 10,
+    "successes": 10,
+    "failures": 0,
+    "avg_score": 0.765,
+    "avg_cost": 0.0014387999999999998,
+    "reward": 0.765
+  },
+  "meta-llama/llama-3.2-3b-instruct": {
+    "total_runs": 80,
+    "successes": 80,
+    "failures": 0,
+    "avg_score": 0.7024999999999997,
+    "avg_cost": 0.001096662500000001,
+    "reward": 0.7024999999999997
+  },
+  "nvidia/nemotron-nano-9b-v2": {
+    "total_runs": 79,
+    "successes": 79,
+    "failures": 0,
+    "avg_score": 0.7,
+    "avg_cost": 0.0014239620253164557,
+    "reward": 0.7
+  },
+  "qwen/qwen3-coder": {
+    "total_runs": 6,
+    "successes": 6,
+    "failures": 0,
+    "avg_score": 0.7,
+    "avg_cost": 0.0009111666666666666,
+    "reward": 0.7
+  },
+  "meta-llama/llama-3.3-70b-instruct": {
+    "total_runs": 40,
+    "successes": 40,
+    "failures": 0,
+    "avg_score": 0.7499999999999998,
+    "avg_cost": 0.00128335,
+    "reward": 0.7499999999999998
+  },
+  "google/gemma-3-27b-it": {
+    "total_runs": 12,
+    "successes": 12,
+    "failures": 0,
+    "avg_score": 0.7916666666666667,
+    "avg_cost": 0.001741083333333333,
+    "reward": 0.7916666666666667
+  },
+  "unknown": {
+    "total_runs": 8,
+    "successes": 0,
+    "failures": 8,
+    "avg_score": 0.0,
+    "avg_cost": 0.0,
+    "reward": 0.0
+  }
+}

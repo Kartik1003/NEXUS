@@ -1,0 +1,114 @@
+{
+  "department_stats": {
+    "sales_marketing:content": {
+      "runs": 11,
+      "avg_score": 7.409090909090909,
+      "success_rate": 0.9090909090909091,
+      "avg_cost": 0.0024105454545454543
+    },
+    "customer_service:general": {
+      "runs": 4,
+      "avg_score": 27.625,
+      "success_rate": 1.0,
+      "avg_cost": 0.00085725
+    },
+    "information_technology:coding": {
+      "runs": 8,
+      "avg_score": 17.1875,
+      "success_rate": 0.875,
+      "avg_cost": 0.0026645
+    },
+    "customer_service:debugging": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.0026
+    },
+    "human_resources:coding": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.002443
+    },
+    "operations:general": {
+      "runs": 2,
+      "avg_score": 44.25,
+      "success_rate": 1.0,
+      "avg_cost": 0.0023955
+    },
+    "Marketing:standard": {
+      "runs": 2,
+      "avg_score": 9.0,
+      "success_rate": 1.0,
+      "avg_cost": 0.058448
+    },
+    "Customer Service:standard": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.029431
+    }
+  },
+  "model_stats": {
+    "sales_marketing:meta-llama/llama-3.2-3b-instruct": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.000861
+    },
+    "customer_service:nvidia/nemotron-nano-9b-v2": {
+      "runs": 4,
+      "avg_score": 27.625,
+      "success_rate": 1.0,
+      "avg_cost": 0.00085725
+    },
+    "information_technology:qwen/qwen3-coder": {
+      "runs": 8,
+      "avg_score": 17.1875,
+      "success_rate": 0.875,
+      "avg_cost": 0.0026645
+    },
+    "sales_marketing:meta-llama/llama-3.3-70b-instruct": {
+      "runs": 10,
+      "avg_score": 7.300000000000001,
+      "success_rate": 0.8999999999999999,
+      "avg_cost": 0.0025655
+    },
+    "customer_service:google/gemma-3-27b-it": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.0026
+    },
+    "human_resources:meta-llama/llama-3.3-70b-instruct": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.002443
+    },
+    "operations:meta-llama/llama-3.3-70b-instruct": {
+      "runs": 2,
+      "avg_score": 44.25,
+      "success_rate": 1.0,
+      "avg_cost": 0.0023955
+    },
+    "Marketing:nvidia/nemotron-nano-9b-v2": {
+      "runs": 1,
+      "avg_score": 8.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.087465
+    },
+    "Customer Service:nvidia/nemotron-nano-9b-v2": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.029431
+    },
+    "Marketing:none": {
+      "runs": 1,
+      "avg_score": 9.5,
+      "success_rate": 1.0,
+      "avg_cost": 0.029431
+    }
+  }
+}
