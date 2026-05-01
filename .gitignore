@@ -1,1 +1,45 @@
+# Environment secrets — NEVER commit these
 .env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+*.egg-info/
+dist/
+build/
+*.egg
+.pytest_cache/
+.mypy_cache/
+
+# Runtime data files (auto-generated)
+backend/data/memory.db
+backend/model_memory.json
+backend/model_stats.json
+backend/pipeline_memory.json
+backend/department_memory.json
+
+# Root-level data duplicates
+model_memory.json
+pipeline_memory.json
+department_memory.json
+
+# Logs
+*.log
+
+# Node
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+
+# OS
+.DS_Store
+Thumbs.db
+*.db

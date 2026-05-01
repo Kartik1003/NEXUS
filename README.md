@@ -1,61 +1,136 @@
-# AgentForge: Self-Learning Multi-Agent Organization
+# AegisOps — Multi-Agent AI Organization
 
-AgentForge is a production-grade multi-agent AI framework designed to orchestrate complex tasks through a dynamically optimized, self-learning pipeline. It transforms a single LLM call into a collaborative organization of specialized agents (CEO, Engineering, Data, Marketing, Finance, QA).
-
-## 🚀 Key Features
-
-### 1. Self-Learning Pipeline Optimization
-The system doesn't just run agents; it learns which sequence works best for specific task types.
-- **UCB-based Selection**: Uses an 80/20 Exploit/Explore strategy to select the most efficient agent sequence.
-- **Cost vs. Quality Balance**: Automatically chooses cheaper models for simple tasks and high-tier models for complex ones.
-- **Dynamic Skipping**: Automatically skips QA and Evaluation steps if the primary agent's confidence score exceeds `0.85`, saving cost and time.
-
-### 2. Parallel Multi-Agent Debate
-For high-complexity tasks (Coding, Analysis, Planning), the CEO triggers a formal debate.
-- **Multi-Model Synthesis**: Runs 3 distinct models in parallel to solve the same problem.
-- **The Judge**: A dedicated evaluator model analyzes all candidate responses, selects a winner, and explains its reasoning.
-- **Visibility**: Real-time logging of model participation and winning selection with specific icons (⚖️).
-
-### 3. Integrated Feedback Loop
-- **Task Classification**: Automatically maps tasks into departments (e.g., "coding" -> engineering, qa, evaluator).
-- **Post-Execution Learning**: After every run, the system reflects on its performance and updates a persistent `pipeline_memory.json` to inform future runs.
-- **Real-time Analytics**: Tracks tokens, USD cost, and agent contributions with a modern glassmorphism UI.
-
-## 🛠️ Tech Stack
-- **Backend**: FastAPI, Async Python, OpenRouter API.
-- **Frontend**: React (Vite), CSS3 (Custom Design System).
-- **Architecture**: DAG-based Execution Engine with Reinforcement Learning loops.
-
-## 🚦 Getting Started
-
-### Prerequisites
-- Python 3.9+
-- Node.js 18+
-- OpenRouter API Key
-
-### Installation
-
-1. **Backend Setup**
-   ```bash
-   cd backend
-   pip install -r requirements.txt
-   # Set your OPENROUTER_API_KEY in .env
-   python -m uvicorn main:app --reload
-   ```
-
-2. **Frontend Setup**
-   ```bash
-   cd frontend
-   npm install
-   npm run dev
-   ```
-
-## 📊 Monitoring
-Navigate to `http://localhost:5173` to view the **Agent Intelligence Dashboard**:
-- **Agent Pipeline**: Visual visualization of the dynamic DAG.
-- **Cost Tracker**: Breakdown of spending by agent and model.
-- **Self-Reflection**: AI-generated analysis of its own successes and failures.
-- **Execution Log**: Real-time stream of agent thoughts and debate results.
+A production-grade multi-agent AI system that simulates a corporate org chart. Every task flows through a strict **CEO → Executive → Department → Employee** pipeline, with LLM calls happening only at the Employee level.
 
 ---
-*Built with ❤️ for Autonomous Intelligence.*
+
+## Quick Start
+
+### Prerequisites
+- Python 3.10+
+- Node.js 18+
+- An [OpenRouter](https://openrouter.ai/) API key
+
+### 1. Backend
+
+```bash
+cd backend
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Configure environment
+cp .env.example .env
+# Edit .env and add your OPENROUTER_API_KEY
+
+# Start the server
+python -m uvicorn main:app --host 0.0.0.0 --port 8001 --reload
+```
+
+### 2. Frontend
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Open **http://localhost:5173** to access the dashboard.
+
+---
+
+## Architecture
+
+```
+User Task
+   │
+   ▼
+CEO Agent (Nova)          — Rule-based keyword classifier, zero LLM cost
+   │
+   ▼
+Executive Agent            — Deterministic plan builder, zero LLM cost
+   │
+   ├──[parallel if different depts]──┐
+   ▼                                 ▼
+Department Agent(s)        Department Agent(s)
+   │                                 │
+   ▼                                 ▼
+Employee Agent(s)  ◄── ONLY LLM CALLS HAPPEN HERE ──►  Employee Agent(s)
+   │
+   ▼
+ResultAggregator → Final Markdown Report
+```
+
+### Departments & Agents
+| Department       | VP Head          | Employees                          |
+|-----------------|------------------|------------------------------------|
+| IT              | Thor (CTO)       | Volt, Byte, Scope, Nimbus, Swift   |
+| Finance         | Capt. America    | Mint, Vault, Ledger, Equity        |
+| HR              | Loki (CHRO)      | Talent, Compliance, Mentor         |
+| Marketing       | Peter (CMO)      | Quill, Flux, Wave, Viral, Vocal    |
+| Operations      | Fury (COO)       | Chrono, Prism, Echo, Oracle, Drive |
+| Customer Service| Nick (COO)       | Echo, Trainer                      |
+
+---
+
+## Key Features
+
+- **UCB Bandit model selection** — learns which models perform best per task type
+- **Parallel department execution** — independent departments run concurrently
+- **SQLite FTS5 memory** — full-text search over past task history and learnings
+- **Real-time token streaming** — tokens streamed live to the frontend via WebSocket
+- **Live org chart** — ReactFlow graph that lights up as agents work
+- **Execution playback** — replay any past task step-by-step
+
+---
+
+## Environment Variables
+
+| Variable            | Required | Description                          |
+|--------------------|----------|--------------------------------------|
+| `OPENROUTER_API_KEY`| ✅ Yes   | Your OpenRouter API key              |
+| `ALLOWED_ORIGINS`   | No       | Comma-separated CORS origins         |
+
+All runtime data files (SQLite DB, model stats JSON) are stored in `backend/data/`.
+
+---
+
+## Project Structure
+
+```
+agent/
+├── backend/
+│   ├── agents/
+│   │   ├── base.py               # BaseAgent with call_llm helper
+│   │   ├── ceo.py                # Nova CEO — keyword classifier
+│   │   ├── executive_agent.py    # Deterministic plan builder
+│   │   ├── department_agents.py  # Department VP routing
+│   │   ├── employee_agents.py    # LLM workers (the only LLM callers)
+│   │   ├── memory.py             # SQLite + FTS5 persistence
+│   │   └── prompt_templates.py
+│   ├── core/
+│   │   ├── orchestrator.py       # Pipeline coordinator (parallel support)
+│   │   ├── llm.py                # OpenRouter client with streaming
+│   │   ├── websocket_handler.py  # WebSocket broadcast manager
+│   │   ├── execution_tracker.py  # Per-task log persistence
+│   │   ├── result_aggregator.py  # Markdown report builder
+│   │   ├── dag.py                # DAG execution engine
+│   │   └── models.py             # Pydantic data models
+│   ├── data/                     # Auto-created: DB, model stats (gitignored)
+│   ├── config.py                 # All settings & data paths
+│   ├── main.py                   # FastAPI app
+│   ├── requirements.txt
+│   ├── .env.example              # Copy to .env
+│   └── .env                      # Your secrets (gitignored)
+└── frontend/
+    ├── src/
+    │   ├── pages/
+    │   │   ├── OutputPage.jsx    # Report viewer (react-markdown)
+    │   │   └── TelemetryPage.jsx
+    │   ├── components/dashboard/
+    │   │   ├── AgentFlowGraph.jsx  # ReactFlow org chart (optimized)
+    │   │   ├── LiveTracker.jsx
+    │   │   └── Dashboard.jsx
+    │   └── services/api.js        # Centralized REST + WebSocket client
+    └── package.json
+```
