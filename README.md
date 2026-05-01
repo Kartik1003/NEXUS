@@ -1,4 +1,4 @@
-# AegisOps — Multi-Agent AI Organization
+# NEXUS — Multi-Agent AI Organization
 
 A production-grade multi-agent AI system that simulates a corporate org chart. Every task flows through a strict **CEO → Executive → Department → Employee** pipeline, with LLM calls happening only at the Employee level.
 
